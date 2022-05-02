@@ -186,9 +186,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
     public void openGallery(){
-        Intent intent = new Intent();
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
         activityResultLauncher.launch(Intent.createChooser(intent,"select Picture"));
     }
 }

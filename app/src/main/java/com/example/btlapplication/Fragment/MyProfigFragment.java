@@ -32,6 +32,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MyProfigFragment extends Fragment {
     private View view;
     private ImageView img_profig;
@@ -171,6 +173,10 @@ public class MyProfigFragment extends Fragment {
     }
 
     public void setBitMapImageView(Bitmap  bitMapImageView){
+        if (bitMapImageView == null && !bitMapImageView.isRecycled()){
+            img_profig.setImageResource(R.drawable.img);
+        }
         img_profig.setImageBitmap(bitMapImageView);
+        Log.e("AA",bitMapImageView.toString());
     }
 }
