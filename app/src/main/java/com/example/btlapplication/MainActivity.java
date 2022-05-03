@@ -19,6 +19,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -113,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (id == R.id.nav_proflie){
             if (mCurrentFragment != FRAGMENT_ACCOUNT){
-                replaceFragment(new MyProfigFragment());
+                replaceFragment(mMyProfigFragment);
                 mCurrentFragment = FRAGMENT_ACCOUNT;
             }
         }
@@ -186,8 +187,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
     public void openGallery(){
-        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        Intent intent = new Intent();
         intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
         activityResultLauncher.launch(Intent.createChooser(intent,"select Picture"));
     }
 }

@@ -48,8 +48,6 @@ public class MyProfigFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_myprofig,container,false);
         initUi();
         mainActivity = (MainActivity) getActivity();
-        progressDialog = new ProgressDialog(getActivity());
-        setProcessDialog();
         setUserInfo();
         initLister();
         return view;
@@ -107,6 +105,8 @@ public class MyProfigFragment extends Fragment {
         ed_email = view.findViewById(R.id.ed_email);
         btn_update_profig = view.findViewById(R.id.btn_update_name);
         btn_update_email = view.findViewById(R.id.btn_update_email);
+        progressDialog = new ProgressDialog(getActivity());
+        setProcessDialog();
         btn_update_profig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,7 +138,6 @@ public class MyProfigFragment extends Fragment {
                 .setDisplayName(strFullname)
                 .setPhotoUri(mUri)
                 .build();
-
         user.updateProfile(profileUpdates)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -173,9 +172,6 @@ public class MyProfigFragment extends Fragment {
     }
 
     public void setBitMapImageView(Bitmap  bitMapImageView){
-        if (bitMapImageView == null && !bitMapImageView.isRecycled()){
-            img_profig.setImageResource(R.drawable.img);
-        }
         img_profig.setImageBitmap(bitMapImageView);
         Log.e("AA",bitMapImageView.toString());
     }
