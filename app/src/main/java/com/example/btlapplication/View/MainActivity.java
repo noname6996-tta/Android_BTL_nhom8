@@ -1,4 +1,4 @@
-package com.example.btlapplication;
+package com.example.btlapplication.View;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -19,7 +19,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -32,6 +31,7 @@ import com.example.btlapplication.Fragment.FravoriteFragment;
 import com.example.btlapplication.Fragment.HIstoryFragment;
 import com.example.btlapplication.Fragment.HomeFragment;
 import com.example.btlapplication.Fragment.MyProfigFragment;
+import com.example.btlapplication.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;

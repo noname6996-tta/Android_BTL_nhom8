@@ -45,4 +45,6 @@ dependencies {
     // load anh tu url
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
+    //
+    implementation "androidx.cardview:cardview:1.0.0"
 }

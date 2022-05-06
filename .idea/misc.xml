@@ -14,9 +14,11 @@
         <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/layout/fragment_changepassword.xml" value="0.1" />
         <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/layout/fragment_fravorite.xml" value="0.1" />
         <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/layout/fragment_historye.xml" value="0.1" />
-        <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/layout/fragment_myprofig.xml" value="0.12" />
         <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/layout/headerlayout_nav.xml" value="0.1" />
+        <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/layout/items_city.xml" value="0.1" />
+        <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/layout/items_restaurant.xml" value="0.25" />
         <entry key="..\:/Androidclass/BTLApplication/app/src/main/res/menu/menu_nav.xml" value="0.22" />
       </map>
     </option>

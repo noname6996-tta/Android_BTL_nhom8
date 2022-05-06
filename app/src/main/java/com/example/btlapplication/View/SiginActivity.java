@@ -1,4 +1,4 @@
-package com.example.btlapplication;
+package com.example.btlapplication.View;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.btlapplication.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -21,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SiginActivity extends AppCompatActivity {
     //email:theanh682001@gmail.com
-    // pass 123456
+    // pass 12345678
     EditText sign_Email,sign_Password;
     Button btnSignin;
     private LinearLayout layout_singUp,layout_ForgotPassword;
@@ -38,7 +39,7 @@ public class SiginActivity extends AppCompatActivity {
         layout_singUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SiginActivity.this, com.example.btlapplication.SignUpActivity.class);
+                Intent intent = new Intent(SiginActivity.this, SignUpActivity.class);
                 startActivity(intent);
             }
         });

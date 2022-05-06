@@ -1,10 +1,9 @@
 package com.example.btlapplication.Fragment;
 
-import static com.example.btlapplication.MainActivity.MY_REQUESR_CODE;
+import static com.example.btlapplication.View.MainActivity.MY_REQUESR_CODE;
 
 import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -24,15 +23,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
-import com.example.btlapplication.MainActivity;
+import com.example.btlapplication.View.MainActivity;
 import com.example.btlapplication.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MyProfigFragment extends Fragment {
     private View view;

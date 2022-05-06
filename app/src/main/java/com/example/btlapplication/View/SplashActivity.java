@@ -1,4 +1,4 @@
-package com.example.btlapplication;
+package com.example.btlapplication.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.btlapplication.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -30,7 +31,7 @@ public class SplashActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user ==null){
             // chưa login
-            Intent intent = new Intent(this, com.example.btlapplication.SiginActivity.class);
+            Intent intent = new Intent(this, SiginActivity.class);
             startActivity(intent);
         }
         else {

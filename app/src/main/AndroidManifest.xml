@@ -11,16 +11,16 @@
         android:theme="@style/Theme.BTLApplication"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".SignUpActivity"
+            android:name=".View.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".SiginActivity"
+            android:name=".View.SiginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".View.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
