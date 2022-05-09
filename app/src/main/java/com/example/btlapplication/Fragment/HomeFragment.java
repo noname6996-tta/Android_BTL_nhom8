@@ -1,6 +1,7 @@
 package com.example.btlapplication.Fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,21 +35,21 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home,container,false);
         initUi();
+        getAllListCity();
         return view;
     }
 
     private void initUi() {
         rec_home = view.findViewById(R.id.rec_home);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         rec_home.setLayoutManager(linearLayoutManager);
 
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL);
-        rec_home.addItemDecoration(dividerItemDecoration);
-
         mCityList = new ArrayList<>();
-        cityAdapter = new CityAdapter(mCityList,getActivity());
+        cityAdapter = new CityAdapter(mCityList,getContext());
 
-        getAllListCity();
+        rec_home.setAdapter(cityAdapter);
+
+
     }
     private void getAllListCity(){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -82,7 +83,7 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Log.e("AAA0",error.toString());
             }
         });
 
